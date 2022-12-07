@@ -13,10 +13,16 @@ M.general = {
     ["<C-e>"] = { "<End>", "end of line" },
 
     -- navigate within insert mode
-    ["<C-h>"] = { "<Left>", "move left" },
-    ["<C-l>"] = { "<Right>", "move right" },
-    ["<C-j>"] = { "<Down>", "move down" },
-    ["<C-k>"] = { "<Up>", "move up" },
+    --["<C-h>"] = { "<Left>", "move left" },
+    --["<C-l>"] = { "<Right>", "move right" },
+    --["<C-j>"] = { "<Down>", "move down" },
+    --["<C-k>"] = { "<Up>", "move up" },
+
+    ["<C-Left>"] = { "<Left>", "move left" },
+    ["<C-Rifht>"] = { "<Right>", "move right" },
+    ["<C-Down>"] = { "<Down>", "move down" },
+    ["<C-UP>"] = { "<Up>", "move up" },
+
   },
 
   n = {
@@ -27,6 +33,13 @@ M.general = {
     ["<C-l>"] = { "<C-w>l", "window right" },
     ["<C-j>"] = { "<C-w>j", "window down" },
     ["<C-k>"] = { "<C-w>k", "window up" },
+
+    ["<M-Left>"] = { "<C-w>h", "window left" },
+    ["<M-Right>"] = { "<C-w>l", "window right" },
+    ["<M-Down>"] = { "<C-w>j", "window down" },
+    ["<M-Up>"] = { "<C-w>k", "window up" },
+
+
 
     -- save
     ["<C-s>"] = { "<cmd> w <CR>", "save file" },
@@ -262,7 +275,7 @@ M.nvimtree = {
 
   n = {
     -- toggle
-    ["<C-n>"] = { "<cmd> NvimTreeToggle <CR>", "toggle nvimtree" },
+    ["<C-t>"] = { "<cmd> NvimTreeToggle <CR>", "toggle nvimtree" },
 
     -- focus
     ["<leader>e"] = { "<cmd> NvimTreeFocus <CR>", "focus nvimtree" },
