@@ -23,7 +23,7 @@ opt.softtabstop = 2
 opt.fillchars = { eob = " " }
 opt.ignorecase = true
 opt.smartcase = true
-opt.mouse = "a"
+opt.mouse = "nvi"
 
 -- Numbers
 opt.number = true
@@ -87,10 +87,12 @@ end
 local default_providers = {
   "node",
   "perl",
-  "python3",
+--  "python3",
   "ruby",
 }
 
 for _, provider in ipairs(default_providers) do
   vim.g["loaded_" .. provider .. "_provider"] = 0
 end
+
+vim.g["python3_host_prog"] = "~/IPyEnv/IVenv38/bin/python3"
