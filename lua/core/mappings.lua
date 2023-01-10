@@ -9,19 +9,23 @@ local M = {}
 M.general = {
   i = {
     -- go to  beginning and end
+    ["<M-b>"] = { "<ESC>^i", "beginning of line" },
+    ["<M-e>"] = { "<End>", "end of line" },
+
     ["<C-b>"] = { "<ESC>^i", "beginning of line" },
     ["<C-e>"] = { "<End>", "end of line" },
 
-    -- navigate within insert mode
-    --["<C-h>"] = { "<Left>", "move left" },
-    --["<C-l>"] = { "<Right>", "move right" },
-    --["<C-j>"] = { "<Down>", "move down" },
-    --["<C-k>"] = { "<Up>", "move up" },
 
-    ["<C-Left>"] = { "<Left>", "move left" },
-    ["<C-Rifht>"] = { "<Right>", "move right" },
-    ["<C-Down>"] = { "<Down>", "move down" },
-    ["<C-UP>"] = { "<Up>", "move up" },
+    -- navigate within insert mode
+    ["<M-h>"] = { "<Left>", "move left" },
+    ["<M-k>"] = { "<Right>", "move right" },
+    ["<M-j>"] = { "<Down>", "move down" },
+    ["<M-u>"] = { "<Up>", "move up" },
+
+    ["<C-h>"] = { "<Left>", "move left" },
+    ["<C-k>"] = { "<Right>", "move right" },
+    ["<C-j>"] = { "<Down>", "move down" },
+    ["<C-u>"] = { "<Up>", "move up" },
 
   },
 
@@ -93,16 +97,16 @@ M.tabufline = {
     -- cycle through buffers
     ["<M-Up>"] = {
       function()
-        require("nvchad_ui.tabufline").tabuflineNext()
+        require("nvchad_ui.tabufline").tabuflinePrev()
       end,
-      "goto next buffer",
+      "goto prev buffer",
     },
 
     ["<M-Down>"] = {
       function()
-        require("nvchad_ui.tabufline").tabuflinePrev()
+        require("nvchad_ui.tabufline").tabuflineNext()
       end,
-      "goto prev buffer",
+      "goto next buffer",
     },
 
     -- pick buffers via numbers
@@ -347,6 +351,20 @@ M.nvterm = {
     },
 
     ["<A-v>"] = {
+      function()
+        require("nvterm.terminal").toggle "vertical"
+      end,
+      "toggle vertical term",
+    },
+
+    ["˙"] = {
+      function()
+        require("nvterm.terminal").toggle "horizontal"
+      end,
+      "toggle horizontal term",
+    },
+
+    ["√"] = {
       function()
         require("nvterm.terminal").toggle "vertical"
       end,

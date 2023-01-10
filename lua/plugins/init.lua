@@ -203,6 +203,11 @@ local plugins = {
       require("core.utils").load_mappings "whichkey"
     end,
   },
+
+  -- My plugins
+  ["kdheepak/lazygit.nvim"] = {
+
+  }
 }
 
 -- Load all plugins
