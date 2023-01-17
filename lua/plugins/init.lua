@@ -206,6 +206,9 @@ local plugins = {
 
   -- My plugins
   ["kdheepak/lazygit.nvim"] = {
+  },
+
+  ["ntpeters/vim-better-whitespace"] = {
 
   }
 }
