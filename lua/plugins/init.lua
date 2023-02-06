@@ -209,7 +209,12 @@ local plugins = {
   },
 
   ["ntpeters/vim-better-whitespace"] = {
+  },
 
+  ["heavenshell/vim-pydocstring"] = {
+  },
+
+  ["wfxr/minimap.vim"] = {
   }
 }
 

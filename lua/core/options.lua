@@ -99,3 +99,4 @@ vim.g["python3_host_prog"] = "~/IPyEnv/IVenv38/bin/python3"
 vim.g["better_whitespace_enabled"] = 1
 vim.g["strip_whitespace_on_save"] = 1
 vim.g["strip_whitespace_confirm"] = 0
+vim.g["pydocstring_doq_path"] = "~/.local/bin/doq"
