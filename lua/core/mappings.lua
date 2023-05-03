@@ -357,34 +357,13 @@ M.nvterm = {
       "toggle vertical term",
     },
 
-    ["˙"] = {
-      function()
-        require("nvterm.terminal").toggle "horizontal"
-      end,
-      "toggle horizontal term",
-    },
+    -- toggle in normal mode with MAC
 
-    ["√"] = {
+    ["<leader>i"] = {
       function()
-        require("nvterm.terminal").toggle "vertical"
-      end,
-      "toggle vertical term",
-    },
-
-    -- new
-
-    ["<leader>h"] = {
-      function()
-        require("nvterm.terminal").new "horizontal"
+        require("nvterm.terminal").toggle "float"
       end,
       "new horizontal term",
-    },
-
-    ["<leader>v"] = {
-      function()
-        require("nvterm.terminal").new "vertical"
-      end,
-      "new vertical term",
     },
   },
 }

@@ -74,4 +74,29 @@ lspconfig.gopls.setup {
   capabilities = M.capabilities,
 }
 
+lspconfig.ansiblels.setup {
+  on_attach = M.on_attach,
+  capabilities = M.capabilities,
+}
+
+lspconfig.sqls.setup {
+  on_attach = M.on_attach,
+  capabilities = M.capabilities,
+}
+
+-- lspconfig.yamlls.setup {
+--   on_attach = M.on_attach,
+--   capabilities = M.capabilities,
+-- }
+
+lspconfig.bashls.setup {
+  on_attach = M.on_attach,
+  capabilities = M.capabilities,
+}
+
+lspconfig.docker_compose_language_service.setup {
+  on_attach = M.on_attach,
+  capabilities = M.capabilities,
+}
+
 return M

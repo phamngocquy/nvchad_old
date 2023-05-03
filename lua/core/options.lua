@@ -95,7 +95,7 @@ for _, provider in ipairs(default_providers) do
   vim.g["loaded_" .. provider .. "_provider"] = 0
 end
 
-vim.g["python3_host_prog"] = "~/IPyEnv/IVenv38/bin/python3"
+vim.g["python3_host_prog"] = "~/.pyenv/versions/3.9.16/bin/python3.9"
 vim.g["better_whitespace_enabled"] = 1
 vim.g["strip_whitespace_on_save"] = 1
 vim.g["strip_whitespace_confirm"] = 0

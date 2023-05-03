@@ -215,6 +215,12 @@ local plugins = {
   },
 
   ["wfxr/minimap.vim"] = {
+  },
+
+  ["kristijanhusak/vim-dadbod-ui"] = {
+  },
+
+  ["tpope/vim-dadbod"] = {
   }
 }
 
