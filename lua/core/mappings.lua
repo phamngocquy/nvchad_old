@@ -218,6 +218,14 @@ M.lspconfig = {
      end,
      "floating diagnostic",
    },
+
+   ["<leader>fm"] = {
+     function()
+       vim.lsp.buf.format { async = true }
+     end,
+     "lsp formatting",
+   },
+
 --
 --    ["[d"] = {
 --      function()
@@ -238,13 +246,6 @@ M.lspconfig = {
 --        vim.diagnostic.setloclist()
 --      end,
 --      "diagnostic setloclist",
---    },
---
---    ["<leader>fm"] = {
---      function()
---        vim.lsp.buf.format { async = true }
---      end,
---      "lsp formatting",
 --    },
 --
 --    ["<leader>wa"] = {

@@ -67,7 +67,23 @@ lspconfig.lua_ls.setup {
 lspconfig.pyright.setup {
   on_attach = M.on_attach,
   capabilities = M.capabilities,
+
+  settings = {
+      python = {
+        analysis = {
+          autoSearchPaths = true,
+          diagnosticMode = "workspace",
+          useLibraryCodeForTypes = true
+        }
+      }
+  }
 }
+
+-- lspconfig.ruff_lsp.setup {
+--   on_attach = M.on_attach,
+--   capabilities = M.capabilities,
+-- }
+
 
 lspconfig.gopls.setup {
   on_attach = M.on_attach,
@@ -79,15 +95,15 @@ lspconfig.ansiblels.setup {
   capabilities = M.capabilities,
 }
 
-lspconfig.sqls.setup {
+lspconfig.sqlls.setup {
   on_attach = M.on_attach,
   capabilities = M.capabilities,
 }
 
--- lspconfig.yamlls.setup {
---   on_attach = M.on_attach,
---   capabilities = M.capabilities,
--- }
+lspconfig.bufls.setup {
+  on_attach = M.on_attach,
+  capabilities = M.capabilities,
+}
 
 lspconfig.bashls.setup {
   on_attach = M.on_attach,
@@ -98,5 +114,16 @@ lspconfig.docker_compose_language_service.setup {
   on_attach = M.on_attach,
   capabilities = M.capabilities,
 }
+
+lspconfig.tsserver.setup {
+  on_attach = M.on_attach,
+  capabilities = M.capabilities,
+}
+
+lspconfig.html.setup {
+  on_attach = M.on_attach,
+  capabilities = M.capabilities,
+}
+
 
 return M
