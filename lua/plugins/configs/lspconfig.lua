@@ -67,6 +67,7 @@ lspconfig.lua_ls.setup {
 lspconfig.pyright.setup {
   on_attach = M.on_attach,
   capabilities = M.capabilities,
+  filetypes = {"python"},
 
   settings = {
       python = {
