@@ -126,5 +126,9 @@ lspconfig.html.setup {
   capabilities = M.capabilities,
 }
 
+lspconfig.ruby_ls.setup {
+  on_attach = M.on_attach,
+  capabilities = M.capabilities,
+}
 
 return M

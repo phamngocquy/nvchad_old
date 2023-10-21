@@ -333,6 +333,14 @@ M.nvterm = {
       end,
       "toggle vertical term",
     },
+
+    -- toggle in normal mode with MAC
+    ["<C-h>"] = {
+      function()
+        require("nvterm.terminal").toggle "float"
+      end,
+      "toggle floating term",
+    },
   },
 
   n = {
@@ -360,12 +368,13 @@ M.nvterm = {
 
     -- toggle in normal mode with MAC
 
-    ["<leader>i"] = {
+    ["<C-h>"] = {
       function()
         require("nvterm.terminal").toggle "float"
       end,
-      "new horizontal term",
+      "toggle floating term",
     },
+
   },
 }
 

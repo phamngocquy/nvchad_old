@@ -16,23 +16,23 @@ M.setup = function()
          formatting.black.with { filetypes = { "python" } },
          formatting.gofmt.with { filetypes = { "go" } },
          formatting.clang_format,
-         diagnostics.ruff,
+         diagnostics.ruff.with { filetypes = { "python" } },
     },
-    on_attach = function (client, bufnr)
-      if client.supports_method("textDocument/formatting") then
-        vim.api.nvim_clear_autocmds({
-          group = augroup,
-          buffer = bufnr,
-        })
-        vim.api.nvim_create_autocmd("BufWritePre", {
-          group = augroup,
-          buffer = bufnr,
-          callback = function ()
-            vim.lsp.buf.format({bufnr = bufnr})
-          end
-        })
-      end
-    end
+    -- on_attach = function (client, bufnr)
+    --   if client.supports_method("textDocument/formatting") then
+    --     vim.api.nvim_clear_autocmds({
+    --       group = augroup,
+    --       buffer = bufnr,
+    --     })
+    --     vim.api.nvim_create_autocmd("BufWritePre", {
+    --       group = augroup,
+    --       buffer = bufnr,
+    --       callback = function ()
+    --         vim.lsp.buf.format({bufnr = bufnr})
+    --       end
+    --     })
+    --   end
+    -- end
 }
 end
 
