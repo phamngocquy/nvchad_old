@@ -67,17 +67,17 @@ lspconfig.lua_ls.setup {
 lspconfig.pyright.setup {
   on_attach = M.on_attach,
   capabilities = M.capabilities,
-  filetypes = {"python"},
+  filetypes = { "python" },
 
   settings = {
-      python = {
-        analysis = {
-          autoSearchPaths = true,
-          diagnosticMode = "workspace",
-          useLibraryCodeForTypes = true
-        }
-      }
-  }
+    python = {
+      analysis = {
+        autoSearchPaths = true,
+        diagnosticMode = "workspace",
+        useLibraryCodeForTypes = true,
+      },
+    },
+  },
 }
 
 -- lspconfig.ruff_lsp.setup {
@@ -85,6 +85,10 @@ lspconfig.pyright.setup {
 --   capabilities = M.capabilities,
 -- }
 
+lspconfig.yamlls.setup {
+  on_attach = M.on_attach,
+  capabilities = M.capabilities,
+}
 
 lspconfig.gopls.setup {
   on_attach = M.on_attach,
@@ -112,6 +116,11 @@ lspconfig.bashls.setup {
 }
 
 lspconfig.docker_compose_language_service.setup {
+  on_attach = M.on_attach,
+  capabilities = M.capabilities,
+}
+
+lspconfig.dockerls.setup {
   on_attach = M.on_attach,
   capabilities = M.capabilities,
 }
